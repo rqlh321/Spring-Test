@@ -28,17 +28,17 @@ public class Airport implements Serializable {
 	private String city;
 	
 	@Column (name="latitude")
-	private double lat;
+	private Double lat;
 	
 	@Column (name="longitude")
-	private double lon;
+	private Double lon;
 	
 	@Column (name="timezone")
 	private String timeZone;
 	
 	public Airport(){}
 	
-	public Airport(String code,String name,String city,double lat,double lon,String timeZone){	
+	public Airport(String code,String name,String city,Double lat,Double lon,String timeZone){	
 		this.code=code;
 		this.name=name;
 		this.city=city;
@@ -65,16 +65,16 @@ public class Airport implements Serializable {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public double getLat() {
+	public Double getLat() {
 		return lat;
 	}
-	public void setLat(double lat) {
+	public void setLat(Double lat) {
 		this.lat = lat;
 	}
-	public double getLon() {
+	public Double getLon() {
 		return lon;
 	}
-	public void setLon(double lon) {
+	public void setLon(Double lon) {
 		this.lon = lon;
 	}
 	public String getTimeZone() {

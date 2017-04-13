@@ -13,16 +13,16 @@ public class Aircraft implements Serializable {
 	public static final String AIRCRAFT_CODE="aircraft_code";
 	public static final String MODEL="model";
 	public static final String RANGE="range";
-
+	public static final String[] FIELDS={AIRCRAFT_CODE,MODEL,RANGE};
 	@Id
-	@Column (name="aircraft_code")
+	@Column (name=AIRCRAFT_CODE)
 	private String aircraftCode;
 	
-	@Column (name="model")
+	@Column (name=MODEL)
 	private String model;
 	
-	@Column (name="range")
-	private int range;
+	@Column (name=RANGE)
+	private Integer range;
 	
 	public Aircraft(){}
 	
@@ -44,10 +44,10 @@ public class Aircraft implements Serializable {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public int getRange() {
+	public Integer getRange() {
 		return range;
 	}
-	public void setRange(int range) {
+	public void setRange(Integer range) {
 		this.range = range;
 	}
 
