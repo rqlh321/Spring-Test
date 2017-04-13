@@ -28,8 +28,8 @@ public class DAO {
     	sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 	}
 	
-	public List getList(Class model, String fields,Integer top,Integer limit){
-		List list;
+	public List<?> getList(Class<?> model, String fields,Integer top,Integer limit){
+		List<?> list;
 	 	Session session = sessionFactory.openSession();
 	 	
 	 	Criteria criteria = session.createCriteria(model)
@@ -58,7 +58,7 @@ public class DAO {
 		return list;
 	}
 	
-	public Object getObject(Class model,String code){
+	public Object getObject(Class<?> model,String code){
 		Object object;
 	 	Session session = sessionFactory.openSession();
 	 	object = session.get(model, code);	 

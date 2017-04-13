@@ -17,7 +17,7 @@ public class MyRestController {
     private DAO dao=new DAO();
     
     @RequestMapping(path="/aircrafts",method = RequestMethod.GET)
-    public List getAircrafts(    		
+    public List<?> getAircrafts(    		
     		@RequestParam(required = false) String fields,
     		@RequestParam(required = false) Integer top,
     		@RequestParam(required = false) Integer limit) {    
@@ -25,7 +25,7 @@ public class MyRestController {
     }
         
     @RequestMapping(path="/airports",method = RequestMethod.GET)
-    public List getAirports(    		
+    public List<?> getAirports(    		
     		@RequestParam(required = false) String fields,
     		@RequestParam(required = false) Integer top,
     		@RequestParam(required = false) Integer limit) {    
